@@ -77,16 +77,59 @@
 //    solve("a+b-c/d*30") => "30*d/c-b+a"
 //    solve("a*b/c+50") => "50+c/b*a"
 
+// вариант 1
+
 // function solve(args){
 
-// 	const arr = [...args]
-// 	const reverseArr = arr.reverse()
+//     const arr = [...args]
+//     let numbers = [];
+    
+//     arr.forEach((el) => {
+//         if(!isNaN(el)){
+//             numbers.push(el)
+//         }
+//     })
 
-// 	return reverseArr.join('')
+//     if(arr.includes(numbers[0])){
+//         arr.splice(arr.indexOf(numbers[0]), numbers.length, numbers.join(''))
+//     }
+
+//     return arr.reverse().join('')
 // }
 
+// вариант 2
+
+// function solve(string) {
+    
+//     const arr = string.split("");
+//     const arr1 = [];
+//     const arr2 = [];
+  
+//     arr.forEach((el) => {
+//       if (!isNaN(el)) {
+//         arr1.push(el);
+//         arr2.push(arr1.join(""));
+//       } else {
+//         arr2.push(el);
+//       }
+//     });
+  
+//     const numbers = arr1.join("");
+//     const result = [];
+
+//     arr2.forEach((el) => {
+//       if (isNaN(el)) {
+//         result.push(el);
+//       } else if (el === numbers) {
+//         result.push(el);
+//       }
+//     });
+
+//     return result.reverse().join("");
+//   }
+  
 //    console.log(solve("100*b/y"));
-//    console.log(solve("a+b-c/d*30") );
+//    console.log(solve("a+b-c/d*30"));
 //    console.log(solve("a*b/c+50"));
 
 // ====================================================
